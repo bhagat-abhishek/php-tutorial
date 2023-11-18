@@ -36,13 +36,44 @@
 
     <ul>
 
-        <?php foreach($books as $book) : ?>
+        <?php foreach ($books as $book) : ?>
             <li><?= $book ?></li>
         <?php endforeach; ?>
 
     </ul>
 
     <!-- Demonstrated different way of looping over an array -->
+
+
+    <h1>Associative arrays</h1>
+
+
+    <?php
+
+    $players = [
+
+        [
+            "name" => "Ronaldo",
+            "club" => "Real Madrid"
+        ],
+        [
+            "name" => "Messi",
+            "club" => "FC Barcelona"
+        ],
+        [
+            "name" => "Sunil",
+            "club" => "FC Benguluru"
+        ],
+
+    ];
+
+    ?>
+
+    <h2>List of players with clubs</h2>
+
+    <?php foreach ($players as $player) : ?>
+        <li><?= $player['name'] ?> (<?= $player['club'] ?>)</li>
+    <?php endforeach; ?>
 
 </body>
 
